@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom PC Builder</title>
+    <link rel="stylesheet" href="custom pc-bulider.css" />
+</head>
+
+<body>
+    <section class="main-container">
+        <section class="main_content">
+            <div class="component" id="cpu">
+                <div class="component-content">
+                    <img class="logos" src="img/cpu_logo.PNG" alt="CPU logo">
+                    <h3>Select Processor to Start Your PC Build</h3>
+                </div>
+                <button id="CpuButton">+</button>
+            </div>
+            <div class="component" id="GPUs">
+                <div class="component-content">
+                    <img class="logos" src="img/gpu_logo.PNG" alt="GPU logo">
+                    <h3>Select Graphics Card for Your PC</h3>
+                </div>
+                <button id="GPUButton">+</button>
+            </div>
+            <div class="component" id="motherBoards">
+                <div class="component-content">
+                    <img class="logos" src="img/motherboard_logo.PNG" alt="Motherboard logo">
+                    <h3>Select Motherboard for Your PC</h3>
+                </div>
+                <button id="MbButton">+</button>
+            </div>
+            <div class="component" id="RAMs">
+                <div class="component-content">
+                    <img class="logos" src="img/ram_logo.PNG" alt="RAM logo">
+                    <h3>Select RAM for Your PC</h3>
+                </div>
+                <button id="RamButton">+</button>
+            </div>
+            <div class="component" id="cabinet">
+                <div class="component-content">
+                    <img class="logos" src="img/cabinet_logo.png" alt="Cabinet logo">
+                    <h3>Select Cabinet for Your PC</h3>
+                </div>
+                <button id="CbButton">+</button>
+            </div>
+            <div class="component" id="ssd">
+                <div class="component-content">
+                    <img class="logos" src="img/ssd_logo.PNG" alt="SSD logo">
+                    <h3>Select SSD for Your PC</h3>
+                </div>
+                <button id="SsdButton">+</button>
+            </div>
+            <div class="component" id="psu">
+                <div class="component-content">
+                    <img class="logos" src="img/ps_logo.PNG" alt="PS logo">
+                    <h3>Select Power Supply for Your PC</h3>
+                </div>
+                <button id="PsuButton">+</button>
+            </div>
+        </section>
+
+        <div class="popup-processors" style="display: none;">
+            <div class="popup-content">
+                <button id="pro_close" class="component_close">X</button>
+                <center><b>Processors</b></center>
+                <p>
+                    Intel i9 <b>(Price: ₹41,637.00) </b><button id="Intel_i9_addButton">Add</button>
+                </p>
+                <p>
+                    Intel i7 <b>(Price: ₹30,400.00) </b><button id="Intel_i7_addButton">Add</button>
+                </p>
+                <p>
+                    Intel i5 <b>(Price: ₹13,699.00) </b><button id="Intel_i5_addButton">Add</button>
+                </p>
+                <p>
+                    Intel i3 <b>(Price: ₹06,399.00) </b><button id="Intel_i3_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Ryzen 9 <b>(Price: ₹34,936.00) </b><button id="Ryzen_9_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Ryzen 7 <b>(Price: ₹24,169.00) </b><button id="Ryzen_7_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Ryzen 5 <b>(Price: ₹13,619.00) </b><button id="Ryzen_5_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Ryzen 3 <b>(Price: ₹07,199.00) </b><button id="Ryzen_3_addButton">Add</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="popup-gpus" style="display: none;">
+            <div class="popup-content">
+                <button id="gpu_close" class="component_close">X</button>
+                <center><b>GPUs</b></center>
+                <p>
+                    NVIDIA GeForce RTX 3090 <br /><b>(Price: ₹2,00,000.00)</b>
+                    <button id="NGR3090_addButton">Add</button>
+                </p>
+                <p>
+                    NVIDIA GeForce RTX 3080 <br /><b>(Price: ₹1,20,000.00)</b>
+                    <button id="NGR3080_addButton">Add</button>
+                </p>
+                <p>
+                    NVIDIA GeForce RTX 3070 <br /><b>(Price: ₹70,000.00)</b>
+                    <button id="NGR3070_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Radeon RX 6900 XT <br /><b>(Price: ₹1,20,000.00)</b>
+                    <button id="ARR6900XT_addButton">Add</button>
+                </p>
+                <p>
+                    NVIDIA GeForce GTX 1660 Super <br /><b>(Price: ₹25,000.00)</b>
+                    <button id="NGTX1660Super_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Radeon RX 5500 XT <br /><b>(Price: ₹20,000.00)</b>
+                    <button id="AR5500XT_addButton">Add</button>
+                </p>
+                <p>
+                    NVIDIA GeForce GTX 1650 Super <br /><b>(Price: ₹18,000.00)</b>
+                    <button id="NGTX1650Super_addButton">Add</button>
+                </p>
+                <p>
+                    AMD Radeon RX 570 <br /><b>(Price: ₹15,000.00)</b>
+                    <button id="ARRX570_addButton">Add</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="popup-motherboard" style="display: none;">
+            <div class="popup-content">
+                <button id="motherboard_close" class="component_close">X</button>
+                <center><b>Motherboards</b></center>
+                <p>
+                    Gigabyte GA-A320M-S2H <br /><b>(Price: ₹9,999)</b>
+                    <button id="GAS_addButton">Add</button>
+                </p>
+                <p>
+                    Gigabyte B450 Aorus Elite <br /><b>(Price: ₹9,399)</b>
+                    <button id="BAE_addButton">Add</button>
+                </p>
+                <p>
+                    Asus Z170 Pro Gaming <br /><b>(Price: ₹14,146)</b>
+                    <button id="AZPG_addButton">Add</button>
+                </p>
+                <p>
+                    Asus Prime Z370-P <br /><b>(Price: ₹9,986)</b>
+                    <button id="APZP_addButton">Add</button>
+                </p>
+                <p>
+                    Asrock B450M Steel Legend <br /><b>(Price: ₹8,150)</b>
+                    <button id="ABSL_addButton">Add</button>
+                </p>
+                <p>
+                    Asrock Z370 Pro4 <br /><b>(Price: ₹11,123)</b>
+                    <button id="AZP_addButton">Add</button>
+                </p>
+                <p>
+                    MSI Z390-A Pro <br /><b>(Price: ₹15,500)</b>
+                    <button id="MZAP_addButton">Add</button>
+                </p>
+                <p>
+                    MSI B450M Pro-VDH <br /><b>(Price: ₹6,742)</b>
+                    <button id="MBPV_addButton">Add</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="popup-rams" style="display: none;">
+            <div class="popup-content">
+                <button id="ram_close" class="component_close">X</button>
+                <center><b>RAMs</b></center>
+                <p>
+                    Crucial CT4G4DFS824A 4GB DDR4 Dual Channel PC RAM
+                    <b>(Price: ₹846.00)</b>
+                    <button id="CC4DDCPR_addButton">Add</button>
+                </p>
+                <p>
+                    Hynix 4GB DDR3 Dual Channel PC RAM <b>(Price: ₹450.00)</b>
+                    <button id="H4DDDCPR_addButton">Add</button>
+                </p>
+                <p>
+                    Corsair VENGEANCE LPX 16 GB DDR4 Dual Channel PC RAM
+                    <b>(Price: ₹4,599.00)</b>
+                    <button id="CVLPX16DDCPR_addButton">Add</button>
+                </p>
+                <p>
+                    Kingston HyperX FURY 8 GB DDR3 PC RAM <b>(Price: ₹2,678.00)</b>
+                    <button id="KHF8DDCPR_addButton">Add</button>
+                </p>
+                <p>
+                    Kingston Value 8 GB DDR3 PC RAM (1600 MHz) <b>(Price: ₹2,700.00)</b>
+                    <button id="KV8DDR31600_addButton">Add</button>
+                </p>
+                <p>
+                    G.Skill Ripjaws V Series 16GB DDR4 Dual Channel PC RAM
+                    <b>(Price: ₹5,475)</b>
+                    <button id="GRV16DDCPR_addButton">Add</button>
+                </p>
+                <p>
+                    Corsair Vengeance RGB Pro 8GB DDR4 Dual Channel PC RAM
+                    <b>(Price: ₹2,549)</b>
+                    <button id="CVRP32DDCPR_addButton">Add</button>
+                </p>
+                <p>
+                    Crucial Ballistix 32GB(2x16) DDR4 Dual Channel PC RAM <br /><b>(Price: ₹7,230)</b>
+                    <button id="CB32DDCPR_addButton">Add</button>
+                </p>
+            </div>
+        </div>
+
+        <section class="cart-section">
+            <img src="img/shopping_cart.png" alt="Cart Logo" class="cart-logo">
+            <div class="cart-box">
+                <h2>Your Cart</h2>
+                <p id="cart_elements"></p>
+                <p><b>Total: <span id="cart_total">0.00</span></b></p>
+                <button id="checkoutButton">Checkout</button>
+                <button id="listclearbutton">Clear List</button>
+            </div>
+        </section>
+
+        <section class="save-share-section">
+            <button id="saveBuild">Save/Share Build</button>
+            <div id="shareLink"></div>
+        </section>
+
+        <div id="notification" class="notification">
+            <p id="notification-text"></p>
+            <button id="notification-close">Close</button>
+        </div>
+    </section>
+
+    <script src="custom pc-bulider.js"></script>
+</body>
+
+</html>
